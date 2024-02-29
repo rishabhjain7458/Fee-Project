@@ -17,12 +17,12 @@
 .heading1 h1{
     padding:auto;
 }
-@media screen and (max-width: 1024px) {
+@media screen and (max-width: 480px) {
     .mainimg{
         display: none !important;
     }
 }
-@media screen and (max-width: 1024px) {
+@media screen and (max-width: 480px) {
     .heading1{
         margin-left:0%;
     }
@@ -40,7 +40,7 @@
 .tnc1{
     margin-top: 10%;
 }
-@media screen and (max-width: 1024px) {
+@media screen and (max-width: 480px) {
     .tnc{
         display: none !important;
     }
@@ -64,7 +64,7 @@
         padding-left: 15%;
     }
 }
-@media screen and (max-width: 1024px) {
+@media screen and (max-width: 480px) {
    .cards .row{
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
@@ -124,7 +124,7 @@ width: 100%;
         gap: 10%;
     }
  }
- @media screen and (max-width: 1024px) {
+ @media screen and (max-width: 480px) {
     .contact{
         text-align: center;
     }
