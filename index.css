@@ -71,7 +71,78 @@
    }
    
 }
+.companies{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 4%;
+    margin-left: 4%;
+}
+.cardcompanies{
+    background-color: white;
+    border-radius: 6%;
+    width: 90%;
+    box-shadow: inset 0px 0px 40px 4px rgb(187, 187, 187);
+    text-align: center;
+    transform: scale(0.95);
+}
 .post{
 border-radius: 15%;
 width: 100%;
 }
+.cardcompanies img{
+    margin-top: 5%;
+}
+.hd1{
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    padding-bottom: 1%;
+    padding-top: 2%;
+}
+.cardcompanies:hover{
+    transform: scale(1);
+}
+
+@media screen and (min-width: 1024px) {
+    .support{
+        display: grid;
+        grid-template-columns: .7fr 1fr;
+        margin-top: 10%;
+        background-color:#A7BEAE;
+    }
+    .support .policies ul li{
+        list-style: none;
+        padding-bottom: 2%;
+        color: rgb(100, 100, 100);
+    }
+    .support .policies ul li:hover{
+        color: black;
+        cursor: pointer;
+    }
+    .policies{
+        display: flex;
+        gap: 10%;
+    }
+ }
+ @media screen and (max-width: 1024px) {
+    .contact{
+        text-align: center;
+    }
+    .support{
+        margin-top: 10%;
+        background-color:#A7BEAE;
+    }
+    .support .policies ul li{
+        list-style: none;
+        padding-bottom: 2%;
+        color: rgb(100, 100, 100);
+        cursor: pointer;
+    }
+    .support .policies ul li:hover{
+        color: black;
+    }
+    .policies{
+        display: flex;
+        gap: 7%;
+    }
+ }
