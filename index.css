@@ -1,148 +1,140 @@
-*{
+* {
     margin-top: 0%;
+    box-sizing: border-box; /* Ensures padding and border are included in the element's total width and height */
 }
-.background-blue{
+
+.background-blue {
     background-color: #A7BEAE;
 }
-.text-element2{
+
+.text-element2 {
     color: #937666;
 }
-.bg-element1{
+
+.bg-element1 {
     background-color: #D3C0CD;
 }
 
-.background-element3{
-    background-color:  #A7BEAE;
+.background-element3 {
+    background-color: #A7BEAE;
 }
-.heading1 h1{
-    padding:auto;
+
+.heading1 h1 {
+    padding: auto; /* This doesn't actually do anything, you might want to specify padding values */
 }
+
 @media screen and (max-width: 1024px) {
-    .mainimg{
+    .mainimg {
+        display: none !important;
+    }
+    
+    .heading1 {
+        margin-left: 0%;
+    }
+    
+    .button1 {
+        margin-top: 10%;
+    }
+    
+    .tnc {
         display: none !important;
     }
 }
-@media screen and (max-width: 1024px) {
-    .heading1{
-        margin-left:0%;
-    }
-}
-.heading1{
+
+.heading1 {
     margin-left: 5%;
 }
-.button1{
-    margin-top: 10%;
-}
-.tnc{
+
+.tnc {
     margin-left: 5%;
     margin-top: 15%;
 }
-.tnc1{
+
+.tnc1 {
     margin-top: 10%;
 }
-@media screen and (max-width: 1024px) {
-    .tnc{
-        display: none !important;
-    }
-}
-@media screen and (min-width: 1024px) {
-    .tnc{
-        display: none !important;
-    }
-}
-.cards{
-    
-    margin-top: 5% ;
+
+.cards {
+    margin-top: 5%;
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 2%;
 }
 
 @media screen and (min-width: 1024px) {
-    .cards .row{
-        display: grid;
-        grid-template-columns: 1fr 1fr 1fr;
-    }
-    .cards .row [class^=col]{
-        padding-left: 15%;
+    .cards {
+        grid-template-columns: repeat(3, 1fr);
+        gap: 2%;
+        padding: 0 5%;
     }
 }
-@media screen and (max-width: 1024px) {
-   .cards .row{
+
+.companies {
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-   }
-   
-}
-.companies{
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-columns: 1fr;
     gap: 4%;
     margin-left: 4%;
 }
-.cardcompanies{
+
+@media screen and (min-width: 768px) {
+    .companies {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+.cardcompanies {
     background-color: white;
     border-radius: 6%;
     width: 90%;
     box-shadow: inset 0px 0px 40px 4px rgb(187, 187, 187);
     text-align: center;
     transform: scale(0.95);
+    margin-bottom: 2%;
 }
-.post{
-border-radius: 15%;
-width: 100%;
+
+.post {
+    border-radius: 15%;
+    width: 100%;
 }
-.cardcompanies img{
+
+.cardcompanies img {
     margin-top: 5%;
 }
-.hd1{
+
+.hd1 {
     width: 100%;
     height: 100%;
     text-align: center;
     padding-bottom: 1%;
     padding-top: 2%;
 }
-.cardcompanies:hover{
+
+.cardcompanies:hover {
     transform: scale(1);
 }
 
-@media screen and (min-width: 1024px) {
-    .support{
-        display: grid;
-        grid-template-columns: .7fr 1fr;
-        margin-top: 10%;
-        background-color:#A7BEAE;
+.support {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 4%;
+    margin-top: 10%;
+    background-color: #A7BEAE;
+}
+
+@media screen and (min-width: 768px) {
+    .support {
+        grid-template-columns: 1fr 1fr;
+        padding: 0 5%;
     }
-    .support .policies ul li{
-        list-style: none;
-        padding-bottom: 2%;
-        color: rgb(100, 100, 100);
-    }
-    .support .policies ul li:hover{
-        color: black;
-        cursor: pointer;
-    }
-    .policies{
-        display: flex;
-        gap: 10%;
-    }
- }
- @media screen and (max-width: 1024px) {
-    .contact{
-        text-align: center;
-    }
-    .support{
-        margin-top: 10%;
-        background-color:#A7BEAE;
-    }
-    .support .policies ul li{
-        list-style: none;
-        padding-bottom: 2%;
-        color: rgb(100, 100, 100);
-        cursor: pointer;
-    }
-    .support .policies ul li:hover{
-        color: black;
-    }
-    .policies{
-        display: flex;
-        gap: 7%;
-    }
- }
+}
+
+.support .policies ul li {
+    list-style: none;
+    padding-bottom: 2%;
+    color: rgb(100, 100, 100);
+}
+
+.support .policies ul li:hover {
+    color: black;
+    cursor: pointer;
+}
