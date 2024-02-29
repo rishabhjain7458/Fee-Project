@@ -17,12 +17,12 @@
 .heading1 h1{
     padding:auto;
 }
-@media screen and (max-width: 480px) {
+@media screen and (max-width: 320px) {
     .mainimg{
         display: none !important;
     }
 }
-@media screen and (max-width: 480px) {
+@media screen and (max-width: 320px) {
     .heading1{
         margin-left:0%;
     }
@@ -40,12 +40,12 @@
 .tnc1{
     margin-top: 10%;
 }
-@media screen and (max-width: 480px) {
+@media screen and (max-width: 320px) {
     .tnc{
         display: none !important;
     }
 }
-@media screen and (min-width: 1024px) {
+@media screen and (min-width: 320px) {
     .tnc{
         display: none !important;
     }
@@ -55,7 +55,7 @@
     margin-top: 5% ;
 }
 
-@media screen and (min-width: 1024px) {
+@media screen and (min-width: 320px) {
     .cards .row{
         display: grid;
         grid-template-columns: 1fr 1fr 1fr;
@@ -64,7 +64,7 @@
         padding-left: 15%;
     }
 }
-@media screen and (max-width: 480px) {
+@media screen and (max-width: 320px) {
    .cards .row{
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
@@ -103,7 +103,7 @@ width: 100%;
     transform: scale(1);
 }
 
-@media screen and (min-width: 1024px) {
+@media screen and (min-width: 320px) {
     .support{
         display: grid;
         grid-template-columns: .7fr 1fr;
@@ -124,7 +124,7 @@ width: 100%;
         gap: 10%;
     }
  }
- @media screen and (max-width: 480px) {
+ @media screen and (max-width: 320px) {
     .contact{
         text-align: center;
     }
