@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Recruitment Reservation System</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <style>
+        /* Global styles */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+
+        header {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 20px;4
+        }
+
+        nav {
+            background-color: #007bff;
+            padding: 10px;
+            text-align: center;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            padding: 10px;
+            margin: 0 10px;
+            font-weight: bold;
+        }
+        section {
+            width: 80%;
+            margin: 20px auto;
+            background-color: #fff;
+            padding: 20px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            border-radius: 8px;
+        }
+
+        h2 {
+            color: #333;
+        }
+
+        p {
+            color: #555;
+        }
+
+        /* Job Listings */
+        .job-listing {
+            border-bottom: 1px solid #ddd;
+            padding: 20px 0;
+            margin-bottom: 30px;
+        }
+
+        .job-listing h3 {
+            color: #007bff;
+        }
+
+        .job-listing p {
+            color: #555;
+        }
+
+        /* Featured Jobs */
+        .featured-jobs {
+            margin-top: 30px;
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+        }
+        .featured-job {
+            width: calc(30% - 20px);
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            padding: 20px;
+            margin-bottom: 20px;
+        }
+
+        .featured-job h3 {
+            color: #007bff;
+        }
+
+        /* Apply Form */
+        form {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #f9f9f9;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        label {
+            display: block;
+            margin-bottom: 10px;
+            font-weight: bold;
+        }
+        input, select, textarea {
+            width: 100%;
+            padding: 15px;
+            margin-bottom: 20px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            box-sizing: border-box;
+        }
+
+        button {
+            background-color: #007bff;
+            color: #fff;
+            padding: 15px 20px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #0056b3;
+        }
+
+        /* Contact Form */
+        #contactForm {
+            max-width: 600px;
+        }
+
+        /* About Us */
+        .about-us {
+            text-align: center;
+        }
+        .about-us p {
+            margin-bottom: 30px;
+        }
+
+        /* Services */
+        .services {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+        }
+
+        .service {
+            width: calc(33.33% - 20px);
+            margin-bottom: 30px;
+            padding: 20px;
+            border-radius: 8px;
+            background-color: #f9f9f9;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .service h3 {
+            color: #007bff;
+            margin-bottom: 10px;
+        }
+
+        .service p {
+            color: #555;
+        }
+
+        /* Footer */
+        footer {
+            margin-top: 50px;
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 20px;
+        }
+        footer a {
+            color: #007bff;
+            text-decoration: none;
+        }
+
+        footer a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Recruitment Reservation System</h1>
+    </header>
+
+    <nav>
+        <a href="#">Home</a>
+        <a href="#">Job Listings</a>
+        <a href="#">Featured Jobs</a>
+        <a href="#">Apply Now</a>
+        <a href="#">Contact Us</a>
+    </nav>
+
+    <section>
+        <h2>Job Listings</h2>
+
+        <div class="job-listing">
+            <h3>Job Title 1</h3>
+            <p>Location: City, State</p>
+            <p>Industry: Example Industry</p>
+            <p>Description: Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer eget justo nec urna cursus feugiat.</p>
+            <button>Apply Now</button>
+        </div>
+
+        <div class="job-listing">
+            <h3>Job Title 2</h3>
+            <p>Location: City, State</p>
+            <p>Industry: Example Industry</p>
+            <p>Description: Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer eget justo nec urna cursus feugiat.</p>
+            <button>Apply Now</button>
+        </div>
+    </section>
+
+    <section class="featured-jobs">
+        <div class="featured-job">
+            <h3>Featured Job 1</h3>
+            <p>Location: City, State</p>
+            <p>Industry: Example Industry</p>
+            <p>Description: Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+            <button>Apply Now</button>
+        </div>
+
+        <div class="featured-job">
+            <h3>Featured Job 2</h3>
+            <p>Location: City, State</p>
+            <p>Industry: Example Industry</p>
+            <p>Description: Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+            <button>Apply Now</button>
+        </div>
+
+        <div class="featured-job">
+            <h3>Featured Job 3</h3>
+            <p>Location: City, State</p>
+            <p>Industry: Example Industry</p>
+            <p>Description: Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+            <button>Apply Now</button>
+        </div>
+    </section>
+
+    <section>
+        <h2>Apply for a Job</h2>
+
+        <form>
+            <label for="jobTitle">Job Title:</label>
+            <input type="text" id="jobTitle" name="jobTitle" required>
+
+            <label for="fullName">Full Name:</label>
+            <input type="text" id="fullName" name="fullName" required>
+
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
+
+            <label for="resume">Resume (PDF or Word):</label>
+            <input type="file" id="resume" name="resume" accept=".pdf, .doc, .docx" required>
+
+            <button type="submit">Submit Application</button>
+        </form>
+    </section>
+
+    <section class="contact-us">
+        <h2>Contact Us</h2>
+        <p>If you have any questions or inquiries, feel free to reach out to us:</p>
+
+        <form id="contactForm">
+            <label for="contactName">Your Name:</label>
+            <input type="text" id="contactName" name="contactName" required>
+
+            <label for="contactEmail">Your Email:</label>
+            <input type="email" id="contactEmail" name="contactEmail" required>
+
+            <label for="message">Message:</label>
+            <textarea id="message" name="message" rows="5" required></textarea>
+            <button type="submit">Submit</button>
+        </form>
+    </section>
+
+    <section class="about-us">
+        <h2>About Us</h2>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed non urna euismod, varius justo sit amet, blandit est.</p>
+    </section>
+
+    <section class="services">
+        <div class="service">
+            <h3>Resume Review</h3>
+            <p>Get expert feedback on your resume to increase your chances of landing the job.</p>
+        </div>
+
+        <div class="service">
+            <h3>Interview Prep</h3>
+            <p>Prepare for interviews with mock interviews and valuable tips from our professionals.</p>
+        </div>
+
+        <div class="service">
+            <h3>Career Counseling</h3>
+            <p>Receive personalized career advice and guidance from experienced career counselors.</p>
+        </div>
+    </section>
+    
+    <footer>
+        <p>Follow us on social media:</p>
+        <a href="#" target="_blank"><i class="fab fa-facebook"></i> Facebook</a>
+        <a href="#" target="_blank"><i class="fab fa-twitter"></i> Twitter</a>
+        <a href="#" target="_blank"><i class="fab fa-linkedin"></i> LinkedIn</a>
+        <p>&copy; 2024 Recruitment Reservation System</p>
+    </footer>
+</body>
+</html>
