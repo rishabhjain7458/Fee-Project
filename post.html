@@ -39,6 +39,11 @@
         }
 
         /* Job Listings */
+        .joblistings{
+            overflow-x: hidden;
+            overflow-y: auto;
+            height: 20em;
+        }
         .job-listing {
             border-bottom: 1px solid #ddd;
             padding: 20px 0;
@@ -52,21 +57,44 @@
         .job-listing p {
             color: #555;
         }
-
-        /* Featured Jobs */
-        .featured-jobs {
+        @media screen and (min-width: 1024px) {
+            .featured-jobs {
             margin-top: 30px;
             display: flex;
             justify-content: space-between;
             flex-wrap: wrap;
+            overflow-x: hidden;
+            overflow-y: auto;
+            height: 20em;
         }
         .featured-job {
-            width: calc(30% - 20px);
+            width: 30%;
             border: 1px solid #ddd;
             border-radius: 8px;
             padding: 20px;
             margin-bottom: 20px;
+           
         }
+    }
+    @media screen and (max-width: 1024px) {
+            .featured-jobs {
+            margin-top: 30px;
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            overflow-x: hidden;
+            overflow-y: auto;
+            height: 20em;
+        }
+        .featured-job {
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            padding: 20px;
+            margin-bottom: 20px;
+           
+        }
+    }
+       
 
         .featured-job h3 {
             color: #007bff;
@@ -163,10 +191,17 @@
         footer a:hover {
             text-decoration: underline;
         }
+        .head{
+            text-align: center;
+            
+        }
+        .head h2{
+        color: white;
+        }
     </style>
 </head>
 <body>
-    <nav class="navbar navbar-expand-lg bg-body-tertiary back pt-0 pb-0 background-blue border-bottom border-dark border-3 border-opacity-75 ">
+    <nav class="navbar navbar-expand-lg bg-body-tertiary back pt-0 pb-0 background-blue  ">
         <div class="container-fluid  background-blue  ">
                   <a class="navbar-brand background-blue " href="#">
                     <img class="background-blue" src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a3/Logo_jobify.svg/1280px-Logo_jobify.svg.png" alt="Logo" width="84" height="30" class="d-inline-block align-text-top">
@@ -177,79 +212,153 @@
           <div class="collapse navbar-collapse" id="navbarNavDropdown">
             <ul class="navbar-nav">
               <li class="nav-item">
-                <a class="nav-link " aria-current="page" href="#">Home</a>
+                <a class="nav-link " aria-current="page" href="/index.html">Home</a>
               </li>
               <li class="nav-item ">
-                <a class="nav-link " href="#">Features</a>
+                <a class="nav-link " href="#comp">Companies</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link  " href="#">Pricing</a>
+                <a class="nav-link  " href="#news-container">News</a>
               </li>
               <li class="nav-item dropdown">
                 <a class="nav-link dropdown-toggle  " href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                  Dropdown link
+                  More
                 </a>
                 <ul class="dropdown-menu">
-                  <li><a class="dropdown-item " href="#">Action</a></li>
-                  <li><a class="dropdown-item" href="#">Another action</a></li>
-                  <li><a class="dropdown-item" href="#">Something else here</a></li>
+                  <li><a class="dropdown-item " href="/post.html">Apply</a></li>
+                  <li><a class="dropdown-item" href="/recruiter.html">Recruit</a></li>
+                  <li><a class="dropdown-item" href="#support">Support</a></li>
                 </ul>
               </li>
             </ul>
           </div>
-          <button class="btn-lg rounded-3 signintop" type="button" class="btn">Sign In</button>
-          <a href="/recruiter.html"><button class="post btn-lg rounded-3 ">Post A Job</button></a>
+          <a href="#"><button type="button1" class=" button1 btn btn-primary me-2">Sign In</button></a>
+          <a href="/recruiter.html"><button type="button1" class=" button1 btn btn-primary">Post A Job</button></a>
         </div>
       </nav>
     <section>
         <h2>Job Listings</h2>
-
+        <div class="joblistings">
         <div class="job-listing">
-            <h3>Job Title 1</h3>
-            <p>Location: City, State</p>
-            <p>Industry: Example Industry</p>
-            <p>Description: Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer eget justo nec urna cursus feugiat.</p>
-            <button>Apply Now</button>
+            <h3>VISA COUNSELOR / TELECALLER</h3>
+            <p>Location: Brar Group of Companies, Mohali, Punjab</p>
+            <p>Industry: Sales and marketing</p>
+            <p>Counselor Responsibilities IncludeOrganizing and managing relevant documents and paperwork. Answering any queries and providing support for visa-related matters. Performing administrative duties such as filing, scanning, and organizing documents. Remaining up-to-date with the latest immigration policies.</p>
+            <a href="#applynow"><button>Apply Now</button></a>
         </div>
 
         <div class="job-listing">
-            <h3>Job Title 2</h3>
-            <p>Location: City, State</p>
-            <p>Industry: Example Industry</p>
-            <p>Description: Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer eget justo nec urna cursus feugiat.</p>
-            <button>Apply Now</button>
+            <h3>Chat Support Representative- Mohali</h3>
+            <p>Location: VitalTech Solutions Pvt Ltd., Mohali, Punjab </p>
+            <p>Industry: Costumer Service</p>
+            <p><ul>
+                <li>Chat and Email coordination with customers</li>
+                <li>Protecting brand image and reputation in the market.</li>
+                <li>Provide real-time support
+                    Escalating to relevant team(s) </li>
+                <li>Proficiency with MS Office particularly MS Excel</li>
+            </ul>
+                </p>
+            <a href="#applynow"><button>Apply Now</button></a>
         </div>
+
+        <div class="job-listing">
+            <h3>VISA COUNSELOR / TELECALLER</h3>
+            <p>Location: Brar Group of Companies, Mohali, Punjab</p>
+            <p>Industry: Sales and marketing</p>
+            <p>Counselor Responsibilities IncludeOrganizing and managing relevant documents and paperwork. Answering any queries and providing support for visa-related matters. Performing administrative duties such as filing, scanning, and organizing documents. Remaining up-to-date with the latest immigration policies.</p>
+            <a href="#applynow"><button>Apply Now</button></a>
+        </div>
+
+        <div class="job-listing">
+            <h3>VISA COUNSELOR / TELECALLER</h3>
+            <p>Location: Brar Group of Companies, Mohali, Punjab</p>
+            <p>Industry: Sales and marketing</p>
+            <p>Counselor Responsibilities IncludeOrganizing and managing relevant documents and paperwork. Answering any queries and providing support for visa-related matters. Performing administrative duties such as filing, scanning, and organizing documents. Remaining up-to-date with the latest immigration policies.</p>
+            <a href="#applynow"><button>Apply Now</button></a>
+        </div>
+
+        <div class="job-listing">
+            <h3>VISA COUNSELOR / TELECALLER</h3>
+            <p>Location: Brar Group of Companies, Mohali, Punjab</p>
+            <p>Industry: Sales and marketing</p>
+            <p>Counselor Responsibilities IncludeOrganizing and managing relevant documents and paperwork. Answering any queries and providing support for visa-related matters. Performing administrative duties such as filing, scanning, and organizing documents. Remaining up-to-date with the latest immigration policies.</p>
+            <a href="#applynow"><button>Apply Now</button></a>
+        </div>
+
+        <div class="job-listing">
+            <h3>VISA COUNSELOR / TELECALLER</h3>
+            <p>Location: Brar Group of Companies, Mohali, Punjab</p>
+            <p>Industry: Sales and marketing</p>
+            <p>Counselor Responsibilities IncludeOrganizing and managing relevant documents and paperwork. Answering any queries and providing support for visa-related matters. Performing administrative duties such as filing, scanning, and organizing documents. Remaining up-to-date with the latest immigration policies.</p>
+            <a href="#applynow"><button>Apply Now</button></a>
+        </div>
+    </div>
     </section>
-
+    <div class="head">
+        <h2><b>Sponsored Jobs</b></h2>
+    </div>
     <section class="featured-jobs">
+        
         <div class="featured-job">
-            <h3>Featured Job 1</h3>
-            <p>Location: City, State</p>
-            <p>Industry: Example Industry</p>
-            <p>Description: Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-            <button>Apply Now</button>
+            <h3>AEM Architect</h3>
+            <p>Location: Ram Builders, IT Park, Chandigarh</p>
+            <p>Industry: Architect</p>
+            <p>We are seeking a talented and motivated Architect to join our dynamic team. As an Architect, you will be responsible for designing, planning, and overseeing the construction of buildings and structures. You will collaborate with clients, engineers, and construction professionals to ensure that projects are completed on time, within budget, and according to specifications.</p>
+            <a href="#applynow"><button>Apply Now</button></a>
         </div>
 
         <div class="featured-job">
-            <h3>Featured Job 2</h3>
-            <p>Location: City, State</p>
-            <p>Industry: Example Industry</p>
-            <p>Description: Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-            <button>Apply Now</button>
+            <h3>AEM Architect</h3>
+            <p>Location: Ram Builders, IT Park, Chandigarh</p>
+            <p>Industry: Architect</p>
+            <p>We are seeking a talented and motivated Architect to join our dynamic team. As an Architect, you will be responsible for designing, planning, and overseeing the construction of buildings and structures. You will collaborate with clients, engineers, and construction professionals to ensure that projects are completed on time, within budget, and according to specifications.</p>
+            <a href="#applynow"><button>Apply Now</button></a>
         </div>
 
         <div class="featured-job">
-            <h3>Featured Job 3</h3>
-            <p>Location: City, State</p>
-            <p>Industry: Example Industry</p>
-            <p>Description: Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-            <button>Apply Now</button>
+            <h3>AEM Architect</h3>
+            <p>Location: Ram Builders, IT Park, Chandigarh</p>
+            <p>Industry: Architect</p>
+            <p>We are seeking a talented and motivated Architect to join our dynamic team. As an Architect, you will be responsible for designing, planning, and overseeing the construction of buildings and structures. You will collaborate with clients, engineers, and construction professionals to ensure that projects are completed on time, within budget, and according to specifications.</p>
+            <a href="#applynow"><button>Apply Now</button></a>
+        </div>
+        <div class="featured-job">
+            <h3>AEM Architect</h3>
+            <p>Location: Ram Builders, IT Park, Chandigarh</p>
+            <p>Industry: Architect</p>
+            <p>We are seeking a talented and motivated Architect to join our dynamic team. As an Architect, you will be responsible for designing, planning, and overseeing the construction of buildings and structures. You will collaborate with clients, engineers, and construction professionals to ensure that projects are completed on time, within budget, and according to specifications.</p>
+            <a href="#applynow"><button>Apply Now</button></a>
+        </div>
+
+        <div class="featured-job">
+            <h3>AEM Architect</h3>
+            <p>Location: Ram Builders, IT Park, Chandigarh</p>
+            <p>Industry: Architect</p>
+            <p>We are seeking a talented and motivated Architect to join our dynamic team. As an Architect, you will be responsible for designing, planning, and overseeing the construction of buildings and structures. You will collaborate with clients, engineers, and construction professionals to ensure that projects are completed on time, within budget, and according to specifications.</p>
+            <a href="#applynow"><button>Apply Now</button></a>
+        </div>
+
+        <div class="featured-job">
+            <h3>AEM Architect</h3>
+            <p>Location: Ram Builders, IT Park, Chandigarh</p>
+            <p>Industry: Architect</p>
+            <p>We are seeking a talented and motivated Architect to join our dynamic team. As an Architect, you will be responsible for designing, planning, and overseeing the construction of buildings and structures. You will collaborate with clients, engineers, and construction professionals to ensure that projects are completed on time, within budget, and according to specifications.</p>
+            <a href="#applynow"><button>Apply Now</button></a>
+        </div>
+
+        <div class="featured-job">
+            <h3>AEM Architect</h3>
+            <p>Location: Ram Builders, IT Park, Chandigarh</p>
+            <p>Industry: Architect</p>
+            <p>We are seeking a talented and motivated Architect to join our dynamic team. As an Architect, you will be responsible for designing, planning, and overseeing the construction of buildings and structures. You will collaborate with clients, engineers, and construction professionals to ensure that projects are completed on time, within budget, and according to specifications.</p>
+            <a href="#applynow"><button>Apply Now</button></a>
         </div>
     </section>
 
     <section>
+        <div id="applynow">
         <h2>Apply for a Job</h2>
-
         <form>
             <label for="jobTitle">Job Title:</label>
             <input type="text" id="jobTitle" name="jobTitle" required>
@@ -265,6 +374,7 @@
 
             <button onclick="window.location.href = 'submit.html';" type="submit">Submit Application</button>
         </form>
+    </div>
     </section>
 
     <section class="contact-us">

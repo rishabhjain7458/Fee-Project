@@ -1,6 +1,6 @@
 * {
     margin-top: 0%;
-    box-sizing: border-box; /* Ensures padding and border are included in the element's total width and height */
+    box-sizing: border-box;
 }
 
 .background-blue {
@@ -20,8 +20,7 @@
 }
 
 .heading1 h1 {
-    padding: auto; /* This doesn't actually do anything, you might want to specify padding values */
-}
+    padding: auto; }
 
 @media screen and (max-width: 1024px) {
     .mainimg {
