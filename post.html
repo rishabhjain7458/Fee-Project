@@ -14,7 +14,7 @@
             font-family: Arial, sans-serif;
             margin: 0;
             padding: 0;
-            background-color: #A7BEAE;
+            background-color: white;
         }
         section {
             width: 80%;
@@ -58,7 +58,10 @@
             color: #555;
         }
         @media screen and (min-width: 1024px) {
-            .featured-jobs {
+            .featured-jobs{
+            text-align: center;
+        }
+            .sponsored {
             margin-top: 30px;
             display: flex;
             justify-content: space-between;
@@ -66,6 +69,7 @@
             overflow-x: hidden;
             overflow-y: auto;
             height: 20em;
+
         }
         .featured-job {
             width: 30%;
@@ -77,7 +81,10 @@
         }
     }
     @media screen and (max-width: 1024px) {
-            .featured-jobs {
+        .featured-jobs{
+            text-align: center;
+        }
+            .sponsored {
             margin-top: 30px;
             display: flex;
             justify-content: space-between;
@@ -191,51 +198,47 @@
         footer a:hover {
             text-decoration: underline;
         }
-        .head{
-            text-align: center;
-            
-        }
         .head h2{
-        color: white;
+        color: rgb(0, 0, 0);
         }
     </style>
 </head>
 <body>
-    <nav class="navbar navbar-expand-lg bg-body-tertiary back pt-0 pb-0 background-blue  ">
-        <div class="container-fluid  background-blue  ">
-                  <a class="navbar-brand background-blue " href="#">
-                    <img class="background-blue" src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a3/Logo_jobify.svg/1280px-Logo_jobify.svg.png" alt="Logo" width="84" height="30" class="d-inline-block align-text-top">
-                  </a>
-          <button class="navbar-toggler bg-body-tertiary" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon  "></span>
-          </button>
-          <div class="collapse navbar-collapse" id="navbarNavDropdown">
-            <ul class="navbar-nav">
-              <li class="nav-item">
-                <a class="nav-link " aria-current="page" href="/index.html">Home</a>
-              </li>
-              <li class="nav-item ">
-                <a class="nav-link " href="#comp">Companies</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link  " href="#news-container">News</a>
-              </li>
-              <li class="nav-item dropdown">
-                <a class="nav-link dropdown-toggle  " href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                  More
-                </a>
-                <ul class="dropdown-menu">
-                  <li><a class="dropdown-item " href="/post.html">Apply</a></li>
-                  <li><a class="dropdown-item" href="/recruiter.html">Recruit</a></li>
-                  <li><a class="dropdown-item" href="#support">Support</a></li>
+    <nav class="navbar navbar-expand-lg text-white pt-0 pb-0">
+        <div class="container-fluid background-blue text-white">
+            <a class="navbar-brand background-blue text-white" href="#">
+                <img class="background-blue" src="images-removebg-preview.png" alt="Logo" width="84" height="65" class="d-inline-block align-text-top">
+            </a>
+            <button class="navbar-toggler bg-body-tertiary" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNavDropdown">
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <a class="nav-link text-white" aria-current="page" href="/index.html">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-white" href="#comp">Companies</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-white" href="#news-container">News</a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link text-white" href="/post.html">Apply</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link text-white" href="/recruiter.html">Recruit</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link text-white" href="#support">Support</a>
+                </li>
+                  
                 </ul>
-              </li>
-            </ul>
-          </div>
-          <a href="#"><button type="button1" class=" button1 btn btn-primary me-2">Sign In</button></a>
-          <a href="/recruiter.html"><button type="button1" class=" button1 btn btn-primary">Post A Job</button></a>
+            </div>
+            <a href="/signup.html"><button type="button1" class="button1 btn me-2" style="background-color: white;">Sign In</button></a>
+            <a href="/recruiter.html"><button type="button1" class="button1 btn" style="background-color: white;">Post A Job</button></a>
         </div>
-      </nav>
+    </nav>
     <section>
         <h2>Job Listings</h2>
         <div class="joblistings">
@@ -295,11 +298,12 @@
         </div>
     </div>
     </section>
-    <div class="head">
-        <h2><b>Sponsored Jobs</b></h2>
-    </div>
+    
     <section class="featured-jobs">
-        
+        <div class="head">
+            <h2><b>Sponsored Jobs</b></h2>
+        </div>
+        <div class="sponsored">
         <div class="featured-job">
             <h3>AEM Architect</h3>
             <p>Location: Ram Builders, IT Park, Chandigarh</p>
@@ -353,6 +357,7 @@
             <p>Industry: Architect</p>
             <p>We are seeking a talented and motivated Architect to join our dynamic team. As an Architect, you will be responsible for designing, planning, and overseeing the construction of buildings and structures. You will collaborate with clients, engineers, and construction professionals to ensure that projects are completed on time, within budget, and according to specifications.</p>
             <a href="#applynow"><button>Apply Now</button></a>
+        </div>
         </div>
     </section>
 
@@ -396,31 +401,11 @@
 
     <section class="about-us">
         <h2>About Us</h2>
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed non urna euismod, varius justo sit amet, blandit est.</p>
+        <p>At Jobify, we're passionate about connecting exceptional talent with exciting career opportunities. With a mission to empower individuals to realize their full potential, we strive to match top talent with leading organizations across various industries.</p>
     </section>
 
-    <section class="services">
-        <div class="service">
-            <h3>Resume Review</h3>
-            <p>Get expert feedback on your resume to increase your chances of landing the job.</p>
-        </div>
-
-        <div class="service">
-            <h3>Interview Prep</h3>
-            <p>Prepare for interviews with mock interviews and valuable tips from our professionals.</p>
-        </div>
-
-        <div class="service">
-            <h3>Career Counseling</h3>
-            <p>Receive personalized career advice and guidance from experienced career counselors.</p>
-        </div>
-    </section>
     
     <footer>
-        <p>Follow us on social media:</p>
-        <a href="#" target="_blank"><i class="fab fa-facebook"></i> Facebook</a>
-        <a href="#" target="_blank"><i class="fab fa-twitter"></i> Twitter</a>
-        <a href="#" target="_blank"><i class="fab fa-linkedin"></i> LinkedIn</a>
         <p>&copy; 2024 Jobify</p>
     </footer>
 </body>

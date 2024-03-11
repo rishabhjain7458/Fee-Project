@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Login Page</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #222831;
+    }
+    .container {
+      max-width: 400px;
+      margin: 50px auto;
+      padding: 20px;
+      background-color: #fff;
+      border-radius: 5px;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    }
+    h1 {
+      text-align: center;
+    }
+    label {
+      display: block;
+      margin-bottom: 5px;
+    }
+    input[type="text"],
+    input[type="password"],
+    button {
+      width: 100%;
+      padding: 10px;
+      margin-bottom: 10px;
+      border: 1px solid #ccc;
+      border-radius: 3px;
+      box-sizing: border-box;
+    }
+    button {
+      background-color: #007bff;
+      color: #fff;
+      cursor: pointer;
+    }
+    button:hover {
+      background-color: #0056b3;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>Login</h1>
+    <form id="loginForm">
+      <label for="username">Username:</label>
+      <input type="text" id="loginUsername" required>
+      <label for="password">Password:</label>
+      <input type="password" id="loginPassword" required>
+      <button type="submit">Login</button>
+      <p>Not a user?</p>
+      <a href="/signup.html">Register now</a><br><br>
+      <a href="/index.html">Return to home page</a>
+    </form>
+  </div>
+
+  <script>
+    // Function to handle form submission for login
+    document.getElementById('loginForm').addEventListener('submit', function(event) {
+      event.preventDefault();
+      
+      var username = document.getElementById('loginUsername').value;
+      var password = document.getElementById('loginPassword').value;
+
+      // Retrieve existing users from localStorage or initialize an empty array
+      var users = JSON.parse(localStorage.getItem('users')) || [];
+
+      // Find the user with the provided username and password
+      var user = users.find(function(user) {
+        return user.username === username && user.password === password;
+      });
+
+      if (user) {
+        alert('Login successful!');
+        window.location.href = 'index.html';
+      } else {
+        alert('Invalid username or password. Please try again.');
+      }
+
+      // Clear the login form
+      document.getElementById('loginUsername').value = '';
+      document.getElementById('loginPassword').value = '';
+    });
+  </script>
+</body>
+</html>

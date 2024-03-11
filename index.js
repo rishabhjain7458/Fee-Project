@@ -1,6 +1,5 @@
-
 const apiKey = 'YOUR_API_KEY';
-const apiUrl = `https://newsapi.org/v2/everything?qInTitle="Companies"&q=openings +hire&from=2024-03-01&to=2024-03-05&sortBy=popularity&apiKey=6a4df677f92548a8aebfd1200ef3791d`;
+const apiUrl = `https://newsapi.org/v2/everything?qInTitle="Companies"&q=openings +hire&sortBy=popularity&apiKey=6a4df677f92548a8aebfd1200ef3791d`;
 
 fetch(apiUrl)
   .then(response => {
@@ -17,10 +16,12 @@ fetch(apiUrl)
     data.articles.forEach(article => {
       const newsArticle = newsTemplate.content.cloneNode(true);
 
-      newsArticle.querySelector('.title').innerText = article.title;
-      newsArticle.querySelector('.description').innerText = article.description || '';
-      newsArticle.querySelector('.url').setAttribute('href', article.url);
-      newsArticle.querySelector('.url').innerText = 'Read more';
+      newsArticle.querySelector('.imagenews').setAttribute('src', article.urlToImage);
+newsArticle.querySelector('.title').innerText = article.title;
+newsArticle.querySelector('.description').innerText = article.description || '';
+newsArticle.querySelector('.date').innerText = article.publishedAt;
+newsArticle.querySelector('.url').setAttribute('href', article.url);
+
 
       newsContainer.appendChild(newsArticle);
     });
@@ -28,5 +29,3 @@ fetch(apiUrl)
   .catch(error => {
     console.error('Error:', error);
   });
-
-  

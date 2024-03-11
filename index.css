@@ -4,7 +4,7 @@
 }
 
 .background-blue {
-    background-color: #A7BEAE;
+    background-color: #222831;
 }
 
 .text-element2 {
@@ -40,7 +40,7 @@
     }
 }
 .navbar{
-    box-shadow: 0px 0px 20px 20px #e1fafc;
+    z-index: 1;
 }
 .heading1 {
     margin-left: 5%;
@@ -54,36 +54,13 @@
 .tnc1 {
     margin-top: 10%;
 }
-.signintop{
-    width: 15vh;
-    height: 5vh;
-    background-color: white;
-    border: solid 1px;
-    color: black;
-    transform: scale(.95);
-    margin-right: 2vh;
-}
-.post{
-    width: 15vh;
-    height: 5vh;
-    background-color: white;
-    border: solid 1px;
-    color: black;
-    transform: scale(.95);
-}
-.signintop:hover{
-    transform: scale(1);
-    background-color: #A7BEAE;
-}
-.post:hover{
-    transform: scale(1);
-    background-color: #A7BEAE;
-}
+
 .cards {
     margin-top: 5%;
     display: grid;
     grid-template-columns: 1fr;
     gap: 2%;
+
 }
 
 @media screen and (min-width: 1024px) {
@@ -91,6 +68,7 @@
         grid-template-columns: repeat(3, 1fr);
         gap: 2%;
         padding: 0 5%;
+        
     }
     .tnc {
         display: none !important;
@@ -116,13 +94,14 @@
 }
 
 .cardcompanies {
-    background-color: white;
+    background-color: #222831;
     border-radius: 6%;
     width: 90%;
-    box-shadow: inset 0px 0px 40px 4px rgb(187, 187, 187);
+
     text-align: center;
-    transform: scale(0.95);
+    transform: scale(0.99);
     margin-bottom: 2%;
+    color: white;
 }
 
 .post {
@@ -151,7 +130,8 @@
     grid-template-columns: 1fr;
     gap: 4%;
     margin-top: 0%;
-    background-color: #A7BEAE;
+    background-color: #222831;
+    color: rgb(255, 255, 255);
 }
 
 @media screen and (min-width: 768px) {
@@ -163,11 +143,11 @@
 .support .policies ul li {
     list-style: none;
     padding-bottom: 2%;
-    color: rgb(100, 100, 100);
+    color: rgb(255, 255, 255);
 }
 
 .support .policies ul li:hover {
-    color: black;
+    color: rgb(0, 0, 0);
     cursor: pointer;
 }
 #contactbtn{
@@ -175,7 +155,7 @@
     border: solid 1px rgb(133, 133, 133);
     margin-top: 5%;
     margin-right: 3%;
-    color: blue;
+    color: #222831;
     border-radius: 10%;
 }
 #contactbtn:hover{
@@ -216,15 +196,69 @@
     background: #555; 
   }
 
-.news .title{
-    background-color: aliceblue;
-}
+
 #news-container{
     padding-left: 10%;
     padding-right: 10%;
 }
 #news-container .description{
-    background-color: #888;
+
     padding-left: 20%;
     padding-right: 20%;
 }
+
+@media screen and (min-width: 1024px) {
+    .video-background {
+        position: absolute;
+          top: 0;
+          left: 0;
+          width: 100%;
+          height: 70.9%;
+          overflow: hidden;
+      }
+      .video-background video {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: auto;
+      }
+      .pr1 {
+        position: relative;
+          z-index: 1;
+          padding: 20px;
+          color: white;
+          background-color: rgba(0, 0, 0, 0.5);
+      }
+}
+
+@media screen and (max-width: 1024px) {
+    .video-background {
+        position: absolute;
+          top: 0;
+          left: 0;
+          width: 100%;
+          height: 80%;
+          overflow: hidden;
+      }
+      .video-background video {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+      }
+      .pr1 {
+        position: relative;
+          z-index: 1;
+          padding: 20px;
+          color: white;
+          background-color: rgba(0, 0, 0, 0.5);
+      }
+}
+.url{
+    text-decoration: none;
+    color: white;
+}
+
+

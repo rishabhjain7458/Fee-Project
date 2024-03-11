@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Signup Page</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #222831;
+    }
+    .container {
+      max-width: 400px;
+      margin: 50px auto;
+      padding: 20px;
+      background-color: #fff;
+      border-radius: 5px;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    }
+    h1 {
+      text-align: center;
+    }
+    label {
+      display: block;
+      margin-bottom: 5px;
+    }
+    input[type="text"],
+    input[type="password"],
+    button {
+      width: 100%;
+      padding: 10px;
+      margin-bottom: 10px;
+      border: 1px solid #ccc;
+      border-radius: 3px;
+      box-sizing: border-box;
+    }
+    button {
+      background-color: #007bff;
+      color: #fff;
+      cursor: pointer;
+    }
+    button:hover {
+      background-color: #0056b3;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>Signup</h1>
+    <form id="signupForm">
+      <label for="username">Username:</label>
+      <input type="text" id="signupUsername" required>
+      <label for="password">Password:</label>
+      <input type="password" id="signupPassword" required>
+      <button type="submit">Signup</button>
+      <p>Already a user?</p>
+      <a href="/login.html">Login</a><br><br>
+      <a href="/index.html">Return to home page</a>
+    </form>
+  </div>
+
+  <script>
+    // Function to handle form submission for signup
+    document.getElementById('signupForm').addEventListener('submit', function(event) {
+      event.preventDefault();
+
+      var username = document.getElementById('signupUsername').value;
+      var password = document.getElementById('signupPassword').value;
+
+      // Retrieve existing users from localStorage or initialize an empty array
+      var users = JSON.parse(localStorage.getItem('users')) || [];
+
+      // Check if the username is already taken
+      var userExists = users.some(function(user) {
+        return user.username === username;
+      });
+
+      if (userExists) {
+        alert('Username already exists. Please choose a different one.');
+        return;
+      }
+
+      // Add the new user to the array
+      users.push({ username: username, password: password });
+
+      // Save the updated users array back to localStorage
+      localStorage.setItem('users', JSON.stringify(users));
+
+      // Clear the signup form
+      document.getElementById('signupUsername').value = '';
+      document.getElementById('signupPassword').value = '';
+
+      alert('Signup successful!');
+      
+    });
+  </script>
+</body>
+</html>
